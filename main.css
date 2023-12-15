@@ -94,7 +94,7 @@ main {
   width: 250px;
   background-color: var(--color-1);
   border-radius: var(--primary-br);
-  color: var(--color-5);
+ 
 }
 .divText {
   background-color: var(--color-3);
@@ -104,7 +104,7 @@ main {
   align-items: center;
   width: 100%;
   border-radius: var(--secondary-br);
-
+  color: var(--color-5);
 }
 #products img {
   border-radius: var(--primary-br);
