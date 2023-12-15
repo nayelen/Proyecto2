@@ -8,12 +8,8 @@
     --color-3: #edc188;
     --color-4: #e9a37d;
     --color-5: #5C4A72;
-    --color-6: #A3586D;
+    --color-6: #b09aa0;
    
-    /* BACKGROUND-COLORS */
-    --primary-bg: var(--color-3);
-    --secondary-bg: var(--color-1);
-    
     /* TEXT-COLORS */
     --primary-text: var(--color-2);
     --secondary-text: var(--color-1);
@@ -79,6 +75,9 @@ margin-right: var(--margin-m);
 .link:hover{
   color: var(--color-5);
 }
+main {
+  background-color: var(--color-1);
+}
 #products {
   display: flex;
   padding: var(--padding-s);
@@ -86,23 +85,36 @@ margin-right: var(--margin-m);
   gap: var(--gap-s);
   
 }
-#products div {
+.divContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 400px;
   width: 250px;
-  background-color: var(--color-3);
+  background-color: var(--color-1);
   border-radius: var(--primary-br);
   color: var(--color-5);
- 
+}
+.divText {
+  background-color: var(--color-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: var(--secondary-br);
+
 }
 #products img {
   border-radius: var(--primary-br);
   height: 280px;
   width: 180px;
   margin-bottom: var(--margin-s);
+}
+#products img:hover{
+  height: 330px;
+  width: 230px;
 }
 #products h2 {
   color: var(--color-2);

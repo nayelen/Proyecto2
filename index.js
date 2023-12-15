@@ -21,6 +21,7 @@ const filterByName = (e) => {
   filtered = filtered.filter((product) => product.name.toLowerCase().includes(e.target.value.toLowerCase()));
   console.log(e.target.value)
   pintarProductos(filtered)
+
 };
 
 const filterSeller$$ = document.querySelector('.seller');
@@ -41,11 +42,12 @@ const getElementByPrice = (e) => {
   e.preventDefault()
   filtered = filtered.filter((product) => {
     if (inputPrice$$.value >= product.price) {
-      return product
+      return product;
     }
   })
   console.log(filtered)
   pintarProductos(filtered);
+  inputPrice$$.value = '';
 };
 const button$$ = document.querySelector(".btn-clean");
 const limpiarFiltros = () => {
@@ -55,6 +57,7 @@ const limpiarFiltros = () => {
   inputPrice$$.value = '';
   filterSeller$$.value = "All";
 };
-inputSearch$$.addEventListener("input", filterByName); filterSeller$$.addEventListener("change", filterSeller);
+inputSearch$$.addEventListener("input", filterByName);
+filterSeller$$.addEventListener("change", filterSeller);
 button$$.addEventListener("click", limpiarFiltros);
 filterByPrice$$.addEventListener("click", getElementByPrice);
