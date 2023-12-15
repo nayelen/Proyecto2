@@ -92,7 +92,10 @@ export const pintarProductos = (productos) => {
 
   productos.forEach((product) => {
     const divProd = document.createElement('div');
+    divProd.className = 'divContainer';
     const imgProd = document.createElement('img');
+    const divText = document.createElement('div');
+    divText.className = 'divText';
     const name = document.createElement('h3');
     const seller = document.createElement('p');
     const price = document.createElement('p');
@@ -105,9 +108,10 @@ export const pintarProductos = (productos) => {
 
     products$$.appendChild(divProd);
     divProd.appendChild(imgProd)
-    divProd.appendChild(name)
-    divProd.appendChild(seller)
-    divProd.appendChild(price)
+    divProd.appendChild(divText);
+    divText.appendChild(name)
+    divText.appendChild(seller)
+    divText.appendChild(price)
 
 
   });
